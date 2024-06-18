@@ -20,5 +20,5 @@ The method package requires only a standard computer with enough RAM to support 
 RAM: 16+ GB
 CPU: 4+ cores, 3.3+ GHz/core
 
-The R implementation of the method is tested under R version 4.2.3. Reproducing our simulation results requires the R packages: `Rfast`,`RSpectra`,`BiocNeighbors`,`pcaPP`,`uwot`,`clusterSim`,`ggplot2`,`scatterplot3d`.
+The R implementation of the method is tested under R version 4.2.3. Reproducing our simulation results requires the R packages: `Rfast`,`RSpectra`,`BiocNeighbors`,`pcaPP`,`uwot`,`clusterSim`,`ggplot2`,`scatterplot3d`,`fossil`.
 
