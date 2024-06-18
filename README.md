@@ -5,3 +5,19 @@ Embedding high-dimensional data into a low-dimensional space is an indispensable
 The method is based on the paper:
 
 Landa, B., Kluger, Y., and Ma, R. (2023) Entropic Optimal Transport Eigenmaps for Nonlinear Alignment and Joint Embedding of High-Dimensional Datasets
+
+
+# Content
+
+The directory `R Codes` includes R scripts for the simulations and data analysis in the manuscript.
+
+
+# System Requirements
+
+The method package requires only a standard computer with enough RAM to support the operations defined by a user. For optimal performance, we recommend a computer with the following specs:
+
+RAM: 16+ GB
+CPU: 4+ cores, 3.3+ GHz/core
+
+The R implementation of the method is tested under R version 4.2.3. Reproducing our simulation results requires the R packages: `Rfast`,`RSpectra`,`BiocNeighbors`,`pcaPP`,`uwot`,`clusterSim`,`ggplot2`,`scatterplot3d`.
+
