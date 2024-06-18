@@ -43,7 +43,7 @@ knn_dist <- function(X,Y){
 ### Setting 1
 
 
-sig.v=(seq(1,8, length.out= 5)) 
+sig.v=(seq(1,8, length.out= 20)) 
 time=matrix(ncol=9,nrow=500)
 error12=matrix(ncol=9,nrow=500)
 error12.out=matrix(ncol=9,nrow=length(sig.v))
@@ -59,7 +59,7 @@ for(pp in 1:length(sig.v)){
   p=1000
   sig1 = theta*0.05
   
-  for(NN in 1:5){
+  for(NN in 1:500){
     
     # #setting 1: basic
     data.X1=data[sample(dim(data)[1],n),]
@@ -290,7 +290,7 @@ for(pp in 1:length(sig.v)){
   p=1000
   sig1 = theta*0.05
   sigma=sig.v[pp]
-  for(NN in 1:5){
+  for(NN in 1:500){
     
     data.X1=data[sample(dim(data)[1],n),]
     data.X2=data[sample(dim(data)[1],n),]
@@ -345,8 +345,8 @@ for(pp in 1:length(sig.v)){
     out.sepl1 = sepl.svd$v[,1:r] 
     
     #data.c=rbind(out.sepl1, out.sepl2)
-    #scatterplot3d(x=data.c[,1], y=data.c[,2], z=data.c[,3], angle=45, color = (c(rep("red",n),rep("blue",n))),pch=20,
-    #              xlab=NA, ylab=NA, zlab=NA, label.tick.marks = FALSE)
+    scatterplot3d(x=data.c[,1], y=data.c[,2], z=data.c[,3], angle=45, color = (c(rep("red",n),rep("blue",n))),pch=20,
+                  xlab=NA, ylab=NA, zlab=NA, label.tick.marks = FALSE)
     
     #KPCA
     sep.svd = eigs(K.mat2,k=r+1)
