@@ -9,9 +9,11 @@ Landa, B., Kluger, Y., and Ma, R. (2023) Entropic Optimal Transport Eigenmaps fo
 
 # Content
 
-The R scripts `simulation_align.R` includes the R codes for the noisy manifold alignment simulations studies in the manuscript.
+The R script `main.R` includes the R function for the proposed EOT eigenmap algorithm.
 
-The R scripts `simulation_cluster.R` includes the R codes for the joint clustering simulations studies in the manuscript.
+The R script `simulation_align.R` includes the R codes for the noisy manifold alignment simulations studies in the manuscript.
+
+The R script `simulation_cluster.R` includes the R codes for the joint clustering simulations studies in the manuscript.
 
 # System Requirements
 
