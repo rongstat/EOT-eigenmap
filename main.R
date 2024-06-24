@@ -8,7 +8,7 @@ library(RSpectra)
 # X: first data matrix (pxn1) to be aligned.
 # Y: second data matrix (pxn2) to be aligned.
 # bdw: numeric (default NULL); user-specified bandwith parameter for the kernel matrix. If set as NULL, a data-driven procedure described in the paper will be used to determine the bandwidth.
-# t: integer (default 0); the diffucion steps.
+# t: integer (default 0); the diffusion steps.
 # q: integer (default NULL); the output embedding dimension. If set as NULL, a data-driven procedure described in the paper will be used to determine its value.
 # tau: numeric (default 0.02); convergence threshold for the Sinkhorn-Knopp algorithm.
 # output: a list containing the EOT low-dimensional embedded dataset.
