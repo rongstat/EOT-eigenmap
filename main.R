@@ -29,12 +29,15 @@ EOTmap <- function(X, Y, bdw = NULL, t=0, q=NULL, tau=0.02){
   v=rep(1,dim(K.mat)[2])
   r.s = rep(dim(K.mat)[2],dim(K.mat)[1])
   c.s = rep(dim(K.mat)[1],dim(K.mat)[2])
-  while(max(abs(diag(u) %*% K.mat %*% v-r.s))>tau | max(abs( t(u)%*% K.mat %*% diag(v)-c.s))>tau){
-    v <- c(c.s/(t(u) %*% K.mat))
-    u <- c(r.s/(K.mat %*% v))
-  }
+    while(max(abs(u* K.mat %*% v-r.s))>0.02 | max(abs( t(t( t(u)%*% K.mat) * v)-c.s))>0.02){
+      v <- c(c.s/(t(u) %*% K.mat))
+      u <- c(r.s/(K.mat %*% v))
+    }
+    
+  K.mat.OT = (u) * K.mat 
+  K.mat.OT=t(t(K.mat.OT) * v)
   print("EOT plan obtained!")
-  K.mat.OT = diag(u) %*% K.mat %*% diag(v)
+  
   if(is.null(q)){
     prop.svd = svds(K.mat.OT, k=80)
     r=max(which(prop.svd$d[1:79]/prop.svd$d[2:80]>1.02))
